@@ -2,7 +2,7 @@
 
     It has been auto-edited by fixincludes from:
 
-	"/mnt/workspace/uber_TC/out/arm-linux-androideabi-6.x/arch-arm/usr/include/linux/a.out.h"
+	"/mnt/workspace/uberTC/out/arm-linux-androideabi-6.x/arch-arm/usr/include/linux/a.out.h"
 
     This had to be done to correct non-standard usages in the
     original, manufacturer supplied header file.  */

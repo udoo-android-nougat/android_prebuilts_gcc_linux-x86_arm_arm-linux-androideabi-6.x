@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/mnt/workspace/uber_TC/out/arm-linux-androideabi-6.x/lib/gcc/arm-linux-androideabi/6.4.1/armv7-a'
+libdir='/mnt/workspace/uberTC/out/arm-linux-androideabi-6.x/lib/gcc/arm-linux-androideabi/6.4.1/armv7-a'

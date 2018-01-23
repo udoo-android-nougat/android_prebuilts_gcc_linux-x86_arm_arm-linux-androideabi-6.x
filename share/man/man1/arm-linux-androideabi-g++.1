@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "GCC 1"
-.TH GCC 1 "2017-07-20" "gcc-6.4.1" "GNU"
+.TH GCC 1 "2017-09-29" "gcc-6.4.1" "GNU"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -649,7 +649,8 @@ in the following sections.
 \&\fI\s-1AVR\s0 Options\fR
 \&\fB\-mmcu=\fR\fImcu\fR \fB\-maccumulate\-args \-mbranch\-cost=\fR\fIcost\fR 
 \&\fB\-mcall\-prologues \-mint8 \-mn_flash=\fR\fIsize\fR \fB\-mno\-interrupts 
-\&\-mrelax \-mrmw \-mstrict\-X \-mtiny\-stack \-nodevicelib \-Waddr\-space\-convert\fR
+\&\-mrelax \-mrmw \-mstrict\-X \-mtiny\-stack \-nodevicelib \-Waddr\-space\-convert 
+\&\-Wmisspelled\-isr\fR
 .Sp
 \&\fIBlackfin Options\fR
 \&\fB\-mcpu=\fR\fIcpu\fR[\fB\-\fR\fIsirevision\fR] 
@@ -13952,11 +13953,15 @@ performed as
 Only change the lower 8@tie{}bits of the stack pointer.
 .IP "\fB\-nodevicelib\fR" 4
 .IX Item "-nodevicelib"
-Don't link against AVR-LibC's device specific library \f(CW\*(C`libdev.a\*(C'\fR.
+Don't link against AVR-LibC's device specific library \f(CW\*(C`lib<mcu>.a\*(C'\fR.
 .IP "\fB\-Waddr\-space\-convert\fR" 4
 .IX Item "-Waddr-space-convert"
 Warn about conversions between address spaces in the case where the
 resulting address space is not contained in the incoming address space.
+.IP "\fB\-Wmisspelled\-isr\fR" 4
+.IX Item "-Wmisspelled-isr"
+Warn if the \s-1ISR\s0 is misspelled, i.e. without \f(CW\*(C`_\|_vector\*(C'\fR prefix.
+Enabled by default.
 .PP
 \f(CW\*(C`EIND\*(C'\fR and Devices with More Than 128 Ki Bytes of Flash
 .IX Subsection "EIND and Devices with More Than 128 Ki Bytes of Flash"
